@@ -239,6 +239,7 @@ h3 {
   font-size: 3.2rem;
   color: var(--clr-yellow);
   margin-bottom: 3.5rem;
+  font-weight: 800;
 }
 .headline h3 a {
   color: var(--clr-light);
