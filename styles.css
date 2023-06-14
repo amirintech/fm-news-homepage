@@ -36,6 +36,7 @@ button {
   background-color: transparent;
 }
 img {
+  display: block;
   max-width: 100%;
 }
 h1,
@@ -176,6 +177,7 @@ h3 {
 .hero .title {
   font-size: 4rem;
   color: var(--clr-dark);
+  font-weight: 800;
 }
 .hero .description {
   color: var(--clr-gunmetal);
@@ -249,6 +251,7 @@ h3 {
 @media screen and (min-width: 1110px) {
   .latest-news {
     min-width: 350px;
+    padding: 3.2rem 2.4rem;
   }
   .latest-news .title {
     font-size: 4rem;
