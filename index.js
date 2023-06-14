@@ -2,10 +2,12 @@
 const openMenuBtn = document.querySelector("#open-menu-btn");
 const closeMenuBtn = document.querySelector("#close-menu-btn");
 const header = document.querySelector("#header");
+const LARGE_SCREEN_WIDTH = 1110;
 let lastNavStatus = "HIDDEN";
 
 // Show the nav bar initially on large screens
-if (innerWidth >= 1110) header.setAttribute("aria-nav-status", "SHOWN");
+if (innerWidth >= LARGE_SCREEN_WIDTH)
+  header.setAttribute("aria-nav-status", "SHOWN");
 
 openMenuBtn.addEventListener("click", () => {
   header.setAttribute("aria-nav-status", "SHOWN");
@@ -18,6 +20,6 @@ closeMenuBtn.addEventListener("click", () => {
 });
 
 window.addEventListener("resize", () => {
-  const status = innerWidth >= 1110 ? "SHOWN" : lastNavStatus;
+  const status = innerWidth >= LARGE_SCREEN_WIDTH ? "SHOWN" : lastNavStatus;
   header.setAttribute("aria-nav-status", status);
 });
