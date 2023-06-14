@@ -7,19 +7,19 @@ let lastNavStatus = "HIDDEN";
 
 // Show the nav bar initially on large screens
 if (innerWidth >= LARGE_SCREEN_WIDTH)
-  header.setAttribute("aria-nav-status", "SHOWN");
+  header.setAttribute("data-nav-status", "SHOWN");
 
 openMenuBtn.addEventListener("click", () => {
-  header.setAttribute("aria-nav-status", "SHOWN");
+  header.setAttribute("data-nav-status", "SHOWN");
   lastNavStatus = "SHOWN";
 });
 
 closeMenuBtn.addEventListener("click", () => {
-  header.setAttribute("aria-nav-status", "HIDDEN");
+  header.setAttribute("data-nav-status", "HIDDEN");
   lastNavStatus = "HIDDEN";
 });
 
 window.addEventListener("resize", () => {
   const status = innerWidth >= LARGE_SCREEN_WIDTH ? "SHOWN" : lastNavStatus;
-  header.setAttribute("aria-nav-status", status);
+  header.setAttribute("data-nav-status", status);
 });
